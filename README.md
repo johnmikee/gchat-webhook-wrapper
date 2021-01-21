@@ -2,7 +2,7 @@
 Small Class to wrap the Google Chat Webhook functionality 
 
 
-Example Card usage:
+Example Card usage:\n
 ga = GAlert()
 headers = ga.headers(
     title="Pizza Bot Customer Support",
