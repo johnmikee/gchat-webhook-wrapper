@@ -2,7 +2,8 @@
 Small Class to wrap the Google Chat Webhook functionality 
 
 
-Example Card usage:\n
+#Example Card usage:
+```
 ga = GAlert()
 headers = ga.headers(
     title="Pizza Bot Customer Support",
@@ -23,8 +24,11 @@ sections = ga.sections_widgets(
 )
 message = ga.build_alert(headers=headers, sections=sections)
 ga.send_alert(message)
+```
 
-Example Simple usage:
+#Example Simple usage:
+```
 ga = GAlert()
 message = ga.simple("hello")
 ga.send_alert(message)
+```
