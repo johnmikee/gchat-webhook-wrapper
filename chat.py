@@ -21,10 +21,21 @@ class GAlert:
         self.message_headers = {"Content-Type": "application/json; charset=UTF-8"}
         self.url = url
 
+    def _stringer(self, input):
+        """
+        all items passed must be strings or Google explodes.
+        """
+        if isinstance(input, str):
+            return input
+        else:
+            return str(input)
+        
     def _updater(self, arg, opts, **kwargs):
         base = {arg: {}}
 
         for k, v in kwargs.items():
+            k = self._stringer(k)
+            v = self._stringer(v)
             if k in opts.keys():
                 opts[k] = v
 
